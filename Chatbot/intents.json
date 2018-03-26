@@ -5,9 +5,13 @@
 		"context_set": ""
 	},
 	{"tag": "greetingResponses",
-		"patterns":["Onawa", "Eee", "Eeno"],
-		"responses":["Owa longwa shike nena kosikola?", "Oto ningi shike?", "Owa lya nale omwiha?"]
+		"patterns":["Onawa","Ondi ku hole.", "Onda mwena", "Aawe","Eewa","Kandi na.", "Eee", "Eeno","Omwaalu", "Ngame ondi hole uugame nongalo","Anna", "Matti","Veijo"],
+		"responses":["Owa longwa shike nena kosikola?", "Otuye kokapana.", "Tuye tu ka dhane etanga.", "Onda hala tu ka tale Black Panther.", "Oto ningi shike?", "Owa lya nale omwiha?", "Ou hole shike?"]
 	
+	},
+	{"tag": "questions",
+		"patterns":["Ongoye lye?"],
+		"responses": ["Carlos. Ongoye lye?","Emilia. Oho dhana etanga?"]
 	},
 	{"tag": "goodbye",
 		"patterns": ["Oshili nawa", "Tokelwa po nawa.", "Oshili nawa kuume.","Lala po nawa.", "Uha la po nawa."],
