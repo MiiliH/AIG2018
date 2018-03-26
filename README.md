@@ -24,6 +24,11 @@ install requirements
 
     pip install -r requirements.txt
 
+Prepare nltk
+
+    >>> import nltk
+    >>> nltk.download('punkt')
+
 #Running the app
 
     python app.py
@@ -36,4 +41,6 @@ When you are done, deactivate virtualenv
 #Chat commands
     debug
     stop debug
+    please translate
+    stop translating
     bye
