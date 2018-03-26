@@ -113,7 +113,7 @@ def prepareData(lang1, lang2, reverse=False):
     return input_lang, output_lang, pairs
 
 
-input_lang, output_lang, pairs = prepareData('eng', 'fra', True)
+input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
 print(random.choice(pairs))
 
 #Model
@@ -384,25 +384,9 @@ if use_cuda:
     encoder1 = encoder1.cuda()
     attn_decoder1 = attn_decoder1.cuda()
 
-#trainIters(encoder1, attn_decoder1, 75000, print_every=5000)
-#print("Model trained.....")
-#print("Saving models.....")
-#torch.save(encoder1,'encoder')
-#torch.save(attn_decoder1,'decoder')#
-#print("Models saved.....")
-
-def translate(input_sentence):
-    print("Loading models")
-    encoder1 = torch.load('encoder')
-    attn_decoder1 = torch.load('decoder')
-    print("Loaded")
-
-    output_words, attentions = evaluate(
-        encoder1, attn_decoder1, input_sentence)
-    print('input =', input_sentence)
-    print('output =', ' '.join(output_words))
-
-repeat = True
-#while(repeat):
-    #sentence = raw_input("Enter your sentence: ")
-translate("onda kuta")
+trainIters(encoder1, attn_decoder1, 1180, print_every=295)
+print("Model trained.....")
+print("Saving models.....")
+torch.save(encoder1,'encoder')
+torch.save(attn_decoder1,'decoder')#
+print("Models saved.....")
