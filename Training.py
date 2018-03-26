@@ -393,8 +393,8 @@ if use_cuda:
 
 def translate(input_sentence):
     print("Loading models")
-    encoder1 = torch.load('/home/phillipus/PycharmProjects/Model/encoder')
-    attn_decoder1 = torch.load('/home/phillipus/PycharmProjects/Model/decoder')
+    encoder1 = torch.load('encoder')
+    attn_decoder1 = torch.load('decoder')
     print("Loaded")
 
     output_words, attentions = evaluate(

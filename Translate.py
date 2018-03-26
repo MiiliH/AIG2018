@@ -19,7 +19,6 @@ use_cuda = torch.cuda.is_available()
 SOS_token = 0
 EOS_token = 1
 
-
 class Lang:
     def __init__(self, name):
         self.name = name
@@ -376,10 +375,10 @@ def evaluateRandomly(encoder, decoder, n=10):
         print('')
 
 hidden_size = 256
-print("Loading models")
-encoder1 = torch.load('/home/phillipus/PycharmProjects/Model/encoder')
-attn_decoder1 = torch.load('/home/phillipus/PycharmProjects/Model/decoder')
-print("Loaded")
+#print("Loading models")
+#encoder1 = torch.load('encoder')
+#attn_decoder1 = torch.load('decoder')
+#print("Loaded")
 
 
 if use_cuda:
@@ -394,17 +393,16 @@ if use_cuda:
 #print("Models saved.....")
 
 def translate(input_sentence):
-    print("Loading models")
-    encoder1 = torch.load('/home/phillipus/PycharmProjects/Model/encoder')
-    attn_decoder1 = torch.load('/home/phillipus/PycharmProjects/Model/decoder')
-    print("Loaded")
+    encoder1 = torch.load('encoder')
+    attn_decoder1 = torch.load('decoder')
 
     output_words, attentions = evaluate(
         encoder1, attn_decoder1, input_sentence)
-    print('input =', input_sentence)
-    print('output =', ' '.join(output_words))
+
+    output = ' '.join(output_words)
+    return output
 
 repeat = True
 #while(repeat):
 #sentence = raw_input("Enter your sentence: ")
-translate("il est très déprimé")
+#translate("onda kuta")
