@@ -2,3 +2,4 @@ src/pip-delete-this-directory.txt
 src/prompt-toolkit
 env
 __pycache__
+.ipynb_checkpoints
