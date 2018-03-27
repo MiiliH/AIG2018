@@ -11,7 +11,11 @@
 	},
 	{"tag": "questions_osh",
 		"patterns":["Ongoye lye?"],
-		"responses": ["Carlos. Ongoye lye?","Emilia. Oho dhana etanga?"]
+		"responses": ["Carlos. Ongoye lye?","Emilia"]
+	},
+	{"tag": "love_osh",
+		"patterns":["Ondi ku hole"],
+		"responses": ["Nangame ondi ku hole shinene.","Oshili ondi ku hole nangame.", "Ongoye awike ndi hole."]
 	},
 	{"tag": "goodbye_osh",
 		"patterns": ["Oshili nawa", "Tokelwa po nawa.", "Oshili nawa kuume.","Lala po nawa.", "Uha la po nawa."],
