@@ -3,3 +3,5 @@ src/prompt-toolkit
 env
 __pycache__
 .ipynb_checkpoints
+Chatbot/checkpoint
+Chatbot/tflearn_logs
