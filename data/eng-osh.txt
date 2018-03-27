@@ -1,3 +1,303 @@
+Go.	Inda !
+Run!	Matuka !
+Run!	Totonka !
+Wow!	Wow !
+Fire!	Omlilo !
+Help!	Kwathela !
+Jump.	Nuka.
+Stop!	Thikama !
+Stop!	Okuthikama !
+Stop!	Thikama !
+Wait!	Telela !
+Wait!	Okutelela !
+I see.	Ondiweteko.
+I try.	Ondakambadhala.
+I won!	Ondasindana !
+I won!	Ondasindana !
+Oh no!	Oh aye !
+Attack!	Okuponokela !
+Attack!	Ponokela !
+Cheers!	Oshilinawa !
+Cheers!	Oshilinawa !
+Cheers!	Oshilinawa !
+Get up.	Thikamapo.
+Got it!	Ondeshimona !
+Got it!	Ondeshimona !
+Got it?	Oweshimona ?
+Got it?	Oweshimona ?
+Got it?	Oweshimona ?
+Hop in.	Nukilamo.
+Hop in.	Nukilamo.
+Hug me.	Papatelandje !
+Hug me.	Papatelandje !
+I fell.	Ondiihatapo.
+I fell.	Ondiihatapo.
+I know.	Ondishishi.
+I left.	Ondaya.
+I left.	Ondaya.
+I lost.	Inandi sindana.
+I'm 19.	Ondina oovula omulongo nomugoyi.
+I'm OK.	Ondili nawa.
+I'm OK.	Ondili nawa.
+Listen.	Pulakena !
+No way!	Aawe !
+No way!	Kapena we ompito.
+No way!	Aawe !
+No way!	Kapena we ompito !
+No way!	Aawe !
+No way!	Kapena we ompito !
+No way!	Aawe !
+Really?	Osho ?
+Really?	Osho ngaa ?
+Really?	Osho tuu ?
+Thanks.	Ndapandula !
+We try.	Otatu kambadhala.
+We won.	Otwa sindanene.
+We won.	Otwa sindanene.
+We won.	Otwa sindanene.
+We won.	Otwa sindanene.
+Ask Tom.	Pula Tom.
+Awesome!	Oshiwanawa !
+Be calm.	Ngungumana !
+Be calm.	Mwena !
+Be calm.	Ngungumana !
+Be cool.	Inda pevi !
+Be fair.	Oshuukilako !
+Be fair.	Oshuukilako !
+Be fair.	Oshuukilako !
+Be fair.	Oshuukilako !
+Be fair.	Oshuukilako !
+Be fair.	Oshuukilako !
+Be kind.	Ne simaneko.
+Be nice.	Kala wuli nawa !
+Be nice.	Kala nawa !
+Be nice.	Kala omuwanawa !
+Be nice.	Kala wuli nawa !
+Be nice.	Kala omuwanawa !
+Be nice.	Kala nawa !
+Beat it.	Shi dhenga !
+Call me.	Ithana ndje !
+Call me.	Dhenge landje !
+Call us.	Twi ithana !
+Call us.	Tu dhengela !
+Come in.	Ila mo !
+Come in.	Pita.
+Come in.	Ila mo !
+Come in.	Pita !
+Come on!	Tuningeni !
+Come on.	Ituyeni !
+Come on.	Natuyeni !
+Come on.	Ila !
+Drop it!	Tulapo !
+Drop it!	Etha !
+Drop it!	Sheetha !
+Drop it!	Shitulapo !
+Get out!	Zamo !
+Get out!	Zamo moka !
+Get out!	Zamo !
+Get out.	Zamo moka.
+Get out.	Zamo.
+Go away!	Inda !
+Go away!	Inda kokule !
+Go away.	Inda mpeyaka !
+Go away.	Zapo !
+Go away.	Zapo mpoka !
+Go away.	Inda !
+Go away.	Inda kokule.
+Go away.	Inda mpeyaka !
+Go away.	Zapo !
+Go away.	Zapo mpoka !
+Go slow.	Enda kashona !
+Go slow.	Enda kashona !
+Goodbye!	Kalapo nawa.
+Hang on!	Tegelela manga !
+Hang on!	Andiya manga !
+Hang on.	Iikwatelela !
+Hang on.	Iikwatelela !
+He quit.	Okwaya.
+He quit.	Okwetha.
+He runs.	Okwa matukapo.
+Help me!	Kwathelandje !
+Help me.	Yambidhidhandje.
+Help me.	Kwathelandje.
+Help us.	Tuyambidhidha !
+Help us.	Tukwathela !
+Hold it!	Shikwata !
+Hold on.	Tegelela.
+I agree.	Twatsakumwe.
+I tried.	Ondakambadhala.
+I tried.	Ondakambadhalele.
+I tried.	Ondli ndakambadhala.
+I'll go.	Otandiyi.
+I'm fat.	Onda ondoka.
+I'm fat.	Ondili nawa kolutu.
+I'm fit.	Onda pama.
+I'm hit!	Onda dhengwa !
+I'm hit!	Onda yahwa !
+I'm ill.	Otandi ehama.
+I'm sad.	Onduvite nayi.
+I'm shy.	Ondasa ohoni.
+I'm wet.	Onda tuta.
+I'm wet.	Onda tuta.
+It's me!	Ongame !
+Join us.	Tuhanganeni.
+Join us.	Tuhanganeni.
+Keep it.	Oshoye !
+Keep it.	Shipungula !
+Kiss me.	Hupita ndje.
+Kiss me.	Hupita ndje.
+Me, too.	Nangame.
+Open up.	Patulula !
+Open up.	Patululapo.
+Perfect!	Oshilinawa !
+See you.	Oshiwete.
+Show me.	Ulikilandje !
+Show me.	Ulikilandje !
+Shut up!	Mwena !
+Shut up!	Pata !
+Shut up!	Mwena !
+Shut up!	Mwena !
+Shut up!	Pata !
+So long.	Otwiweteni !
+Take it.	Shikufapo !
+Take it.	Kufapo !
+Tell me.	Lombwelandje !
+Tell me.	Lombwelandje !
+Tom won.	Tom okwasindana.
+Wake up!	Penduka !
+Wake up!	Fikama !
+Wake up!	Penduka !
+Wake up.	Pendukapo !
+Wake up.	Pendukeni !
+Wash up.	Koshapo !
+Wash up.	Iyoga !
+We know.	Otushishi.
+We lost.	Inatu sindana.
+We lost.	Inatu monamosha.
+We lost.	Otwadhengwa.
+We lost.	Inatu sindana.
+We lost.	Inatu monamosha.
+We lost.	Otwadhengwa.
+We lost.	Inatu sindana.
+We lost.	Inatu monamosha.
+We lost.	Otwadhengwa.
+We lost.	Inatu sindana.
+Who won?	Olye a sindana ?
+Who won?	Olye a monamosha ?
+You run.	Omatuka.
+Am I fat?	Onda hondoka ?
+Am I fat?	Ondina olutu ulnene ?
+Back off.	Shuna monima !
+Back off.	Inda.
+Back off.	Shuna monima !
+Back off.	Inda.
+Be a man.	Kala onlumentu !
+Be a man.	Kala onsamane !
+Be still.	Ngungumana !
+Be still.	Ino inyenga !
+Be still.	Ino kulukuta !
+Beats me.	Kandishishi.
+Beats me.	Kandishiwo.
+Call Tom.	Ithana Tom.
+Call Tom.	Dhengela Tom.
+Cheer up!	Inuva nayi !
+Cool off!	Inda pevi !
+Cuff him.	Mumanga.
+Drive on.	Shinga !
+Drive on.	Ukilila !
+Drive on.	Pitapo !
+Drive on.	Pita !
+Get down!	Inda pevi !
+Get down.	Inda pevi !
+Get down.	Inda pevi !
+Get down.	Inda pevi !
+Get down.	Inda pevi !
+Get lost!	Inda !
+Get lost!	Inda kwi !
+Get lost!	Inda !
+Get real!	Manamo !
+Go ahead.	Inda komesho.
+Go ahead.	Tsikila !
+Go ahead.	Natango komesho !
+Go ahead.	Inda komesho !
+Good job!	Walonga nawa !
+Good job!	Waninga nawa !
+Good job!	Walonga nawa !
+Grab him.	Mukwata.
+Grab him.	Muhakana.
+Have fun.	Inda wuka iwuvithe nawa !
+Have fun.	Inda wuka iwuvithe nawa !
+He tries.	Okwakambadhala.
+He's wet.	Okwatuta.
+Hi, guys.	Ongini aholike !
+How cute!	Okawanawa !
+How deep?	Uule uthike peni  ?
+How nice!	Oshiwanawa ngini !
+How nice!	Otashimonika nawa ngini !
+How nice!	Oshilinawa !
+How nice!	Oshilinawa ngini !
+Humor me.	Lombwelandje.
+Hurry up.	Endelela.
+Hurry up.	Katuka !
+Hurry up.	Endelela !
+Hurry up.	Katuka !
+I am fat.	Onda ondoka.
+I did OK.	Onda ninga nawa.
+I did OK.	Ondalonga nawa.
+I did it.	Ondeshi ninga.
+I did it.	Osho ndaninga.
+I forgot.	Onda dhimbwa.
+I get it.	Onduviteko.
+I got it.	Onduvako.
+I got it.	Ondeshimona.
+I phoned.	Onda dhenga.
+I phoned.	Ondali ndadhenga.
+I refuse.	Nandihala.
+I refuse.	Ndatinda.
+I saw it.	Ndamonene.
+I saw it.	Ndamonene.
+I stayed.	Opo ndakala.
+I stayed.	Ondakalapo.
+I use it.	Andishilongitha.
+I use it.	Osho andilongitha.
+I use it.	Andishilongitha.
+I'll pay.	Andifutu.
+I'll try.	Andikambadhala.
+I'm back.	Ondazako.
+I'm back.	Ondagaluka.
+I'm bald.	Kandina mafufu komutse.
+I'm busy.	Ondina iilonga.
+I'm busy.	Ondi ipyakidhila.
+I'm calm.	Ndangungumana.
+I'm cold.	Onduvite utalala.
+I'm done.	Ondamana.
+I'm fine.	Ondili nawa.
+I'm fine.	Ondili nawa.
+I'm fine.	Ondili nawa.
+I'm free!	Onda manguluka !
+I'm free.	Ondina ethimbo.
+I'm free.	Onda manguluka.
+I'm full.	Onda kuta !
+I'm full.	Onda kuta !
+I'm glad.	Onda nyanyukwa.
+I'm home.	Ondili kegumbo.
+I'm late.	Nda tokelwa.
+I'm lazy.	Ondanyengwa.
+I'm lazy.	Itandi vulusha.
+I'm lazy.	Ondimu talala.
+I'm lazy.	Ondimu nyenge.
+I'm okay.	Ondili nawa.
+I'm okay.	Ondili nawa.
+I'm safe.	Ondili megameno.
+I'm sick.	Otandi ehama.
+I'm sure.	Ondishishi nawa.
+I'm sure.	Ondishishi.
+I'm sure.	Ondishishi.
+I'm sure.	Ondishishi nawa.
+I'm tall.	Ondimle.
+I'm thin.	Ndananga.
+I'm tidy.	Ondayela.
+I'm tidy.	Ondayela.
 In the beginning was the Word, and the Word was with God, and the Word was God.	Ohapu oya li ko, manga uuyuni inaau shitwa. Ohapu oya li Kalunga nOhapu oya li Kalunga.
 The same was in the beginning with God.	Okuza ketamekolela Ohapu oya li puKalunga.
 All things were made by him; and without him was not any thing made that was made.	Kalunga okwe mu shititha iinima ayihe, nokaku na nando oshinima shimwe shomeshito inaashi shitwa kee po.
