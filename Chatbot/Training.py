@@ -169,6 +169,6 @@ if __name__ == '__main__':
 
     while True:
         sentence = input("you: ")
-        response(sentence, model, words, classes)
+        response(sentence, model, words, classes, intents)
         if sentence == str("Bye") or sentence == str("Goodbye"):
             break
