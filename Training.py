@@ -384,7 +384,7 @@ if use_cuda:
     encoder1 = encoder1.cuda()
     attn_decoder1 = attn_decoder1.cuda()
 
-trainIters(encoder1, attn_decoder1, 1180, print_every=295)
+trainIters(encoder1, attn_decoder1, 880, print_every=110)
 print("Model trained.....")
 print("Saving models.....")
 torch.save(encoder1,'encoder')
