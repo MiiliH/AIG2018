@@ -1,12 +1,12 @@
 # AIG2018
 Repo for the AIG course project
 
-#Requirements
+## Requirements
 * Python 3
 * [Python virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
 
-#Installation
+## Installation
 checkout git repository:
 
     git clone ...
@@ -29,16 +29,16 @@ Prepare nltk
     >>> import nltk
     >>> nltk.download('punkt')
 
-#Running the app
+## Running the app
 
     python app.py
 
-#Virtualenv
+## Virtualenv
 When you are done, deactivate virtualenv
 
     deactivate
 
-#Chat commands
+## Chat commands
     debug
     stop debug
     please translate
