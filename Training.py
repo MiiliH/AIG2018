@@ -412,7 +412,7 @@ if __name__ == '__main__':
     print("Model trained.....")
     print("Saving models.....")
     torch.save(encoder1,'encoder')
-    torch.save(attn_decoder1,'decoder')#
+    torch.save(attn_decoder1,'decoder')
     print("Models saved.....")
 
     evaluateRandomly(encoder1, attn_decoder1)
