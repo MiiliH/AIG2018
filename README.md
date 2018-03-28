@@ -42,5 +42,11 @@ When you are done, deactivate virtualenv
     debug
     stop debug
     please translate
+    Translate
+    please search
+    Search 
+    stop searching
     stop translating
     bye
+    goodbye
+    exit
