@@ -12,8 +12,6 @@ from torch import optim
 import torch.nn.functional as F
 import time
 import math
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import numpy as np
 
 use_cuda = torch.cuda.is_available()
@@ -370,15 +368,7 @@ def evaluateRandomly(encoder, decoder, n=10):
         output_sentence = ' '.join(output_words)
         print('<', output_sentence)
         print('')
-
-def showPlot(points):
-    fig, ax = plt.subplots()
-    # this locator puts ticks at regular intervals
-    loc = ticker.MultipleLocator(base=0.2)
-    ax.yaxis.set_major_locator(loc)
-    plt.plot(points)
-    plt.show()
-
+        
 def evaluateRandomly(encoder, decoder, n=15):
     print('')
     print('Evaluating the model')
