@@ -3,7 +3,7 @@ from prompt_toolkit.styles import Style
 import sys
 import traceback
 import logging
-
+import googleSearch as gs
 import Chatbot.chat as chat
 import Translate as tr
 from Translate import EncoderRNN
@@ -11,7 +11,8 @@ from Translate import AttnDecoderRNN
 
 state = {
     'debug': False,
-    'translate': False
+    'translate': False,
+    'search': False
 }
 
 input_style = Style.from_dict({
@@ -31,7 +32,9 @@ def getTranslation(user_input, state):
         else:
             translate = "Ouh, man. I don't know that word"
     return translate
-
+def getSearch(user_input, state):
+	search = gs.search(user_input);
+	return search
 def getOutput(user_input, state):
     if user_input == "debug":
         state['debug'] = True
@@ -42,14 +45,21 @@ def getOutput(user_input, state):
     if user_input == "exit" or user_input == "quit" or user_input == "bye":
        print(user_input)
        exit()
-
     if user_input == "please translate":
         state['translate'] = True
         return "Sure, I will translate from Oshiwambo to English"
     if user_input == "stop translating":
         state['translate'] = False
         return "Okay, let's talk about something"
+    if user_input == "please search":
+	    state['search']  = True
+	    return "What do you want to search about"
+    if user_input == "stop searching":
+	    state['search'] = False
+	    return "Okay, is there anything else"
 
+    if state['search']:
+	    return getSearch(user_input, state)
     if state['translate']:
         return getTranslation(user_input, state)
     else:
