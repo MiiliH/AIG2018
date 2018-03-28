@@ -18,6 +18,7 @@ use_cuda = torch.cuda.is_available()
 #load data
 SOS_token = 0
 EOS_token = 1
+prints = False
 
 class Lang:
     def __init__(self, name):
@@ -56,7 +57,8 @@ def normalizeString(s):
     return s
 
 def readLangs(lang1, lang2, reverse=False):
-    print("Reading lines...")
+    if prints:
+        print("Reading lines...")
 
     # Read the file and split into lines
     lines = open('data/%s-%s.txt' % (lang1, lang2), encoding='utf-8').\
@@ -99,21 +101,29 @@ def filterPairs(pairs):
 
 def prepareData(lang1, lang2, reverse=False):
     input_lang, output_lang, pairs = readLangs(lang1, lang2, reverse)
-    print("Read %s sentence pairs" % len(pairs))
+    if prints:
+        print("Read %s sentence pairs" % len(pairs))
+
     pairs = filterPairs(pairs)
-    print("Trimmed to %s sentence pairs" % len(pairs))
-    print("Counting words...")
+
+    if prints:
+        print("Trimmed to %s sentence pairs" % len(pairs))
+        print("Counting words...")
+
     for pair in pairs:
         input_lang.addSentence(pair[0])
         output_lang.addSentence(pair[1])
-    print("Counted words:")
-    print(input_lang.name, input_lang.n_words)
-    print(output_lang.name, output_lang.n_words)
+
+    if prints:
+        print("Counted words:")
+        print(input_lang.name, input_lang.n_words)
+        print(output_lang.name, output_lang.n_words)
     return input_lang, output_lang, pairs
 
 
 input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
-print(random.choice(pairs))
+if prints:
+    print(random.choice(pairs))
 
 #Model
 #encoderRNN
