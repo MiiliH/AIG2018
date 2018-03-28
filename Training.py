@@ -22,6 +22,10 @@ use_cuda = torch.cuda.is_available()
 SOS_token = 0
 EOS_token = 1
 
+# Amount of Words
+# This determines also the length for attention decoder
+MAX_LENGTH = 10
+
 class Lang:
     def __init__(self, name):
         self.name = name
@@ -78,10 +82,6 @@ def readLangs(lang1, lang2, reverse=False):
         output_lang = Lang(lang2)
 
     return input_lang, output_lang, pairs
-
-# Amount of Words
-# This determines also the length for attention decoder
-MAX_LENGTH = 10
 
 def filterPair(p):
     return len(p[0].split(' ')) < MAX_LENGTH and \
@@ -202,7 +202,6 @@ class AttnDecoderRNN(nn.Module):
 #Training the model
 def indexesFromSentence(lang, sentence):
     return [lang.word2index[word] for word in sentence.split(' ')]
-
 
 def variableFromSentence(lang, sentence):
     indexes = indexesFromSentence(lang, sentence)
@@ -397,8 +396,11 @@ if use_cuda:
     encoder1 = encoder1.cuda()
     attn_decoder1 = attn_decoder1.cuda()
 
+# Language information is needed both when using translator for training and as a module
+# for translating
+input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
+
 if __name__ == '__main__':
-    input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
     print(random.choice(pairs))
 
     # Amount of neurons in a hidden layer
@@ -408,11 +410,11 @@ if __name__ == '__main__':
 
     # Higher learning rate helps to converge faster with gradient descedent but
     # if it is too big, the algrithm may not converge at all
-    trainIters(encoder1, attn_decoder1, 3000, print_every=300, learning_rate=0.01)
+    trainIters(encoder1, attn_decoder1, 4000, print_every=300, learning_rate=0.02)
     print("Model trained.....")
     print("Saving models.....")
     torch.save(encoder1,'encoder')
     torch.save(attn_decoder1,'decoder')
     print("Models saved.....")
 
-    evaluateRandomly(encoder1, attn_decoder1)
+    evaluateRandomly(encoder1, attn_decoder1, n=30)
