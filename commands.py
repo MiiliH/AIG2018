@@ -6,9 +6,9 @@ def tc(user_input):
     inlist = False
     if user_input in t_commands:
         inlist = True
-    return inList
+    return inlist
 def ts(user_input):
-    inList = False
+    inlist = False
     if user_input in s_commands:
         inlist = True
     return inlist
