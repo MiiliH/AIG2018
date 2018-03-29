@@ -5,7 +5,7 @@ import traceback
 import logging
 import googleSearch as gs
 import Chatbot.chat as chat
-import translate as tr
+import Translate as tr
 from Translate import EncoderRNN
 from Translate import AttnDecoderRNN
 
