@@ -5,7 +5,12 @@ from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
 chrome_options.add_argument("--window-size=1024x768")
 chrome_options.add_argument("--headless")
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver",chrome_options = chrome_options)
+
+# Try if chrome driver is on path
+try:
+    driver = webdriver.Chrome(chrome_options = chrome_options)
+except FileNotFoundError:
+    driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", chrome_options = chrome_options)
 
 def search(searchQuery):
 	searchQuery = searchQuery.replace(' ','+')

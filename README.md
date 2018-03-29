@@ -54,6 +54,16 @@ Prepare nltk
 
 You may need to install Pytorch [manually](http://pytorch.org/)
 
+### Install chromedriver
+
+With Linux
+
+    sudo apt-get install chromium-chromedriver
+
+With Mac
+
+    brew install chromedriver
+
 ## Running the app
 
     python app.py
