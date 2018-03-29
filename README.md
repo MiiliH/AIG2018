@@ -31,6 +31,8 @@ Prepare nltk
     >>> import nltk
     >>> nltk.download('punkt')
 
+You may need to install Pytorch [manually](http://pytorch.org/)
+
 ### Create virtual environment with conda
 
     conda create -n env python=3.6
@@ -49,6 +51,8 @@ Prepare nltk
 
     >>> import nltk
     >>> nltk.download('punkt')
+
+You may need to install Pytorch [manually](http://pytorch.org/)
 
 ## Running the app
 
