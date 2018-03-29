@@ -6,8 +6,11 @@ import logging
 import googleSearch as gs
 import Chatbot.chat as chat
 import Translate as tr
-from Translate import EncoderRNN
-from Translate import AttnDecoderRNN
+import commands as cmd
+
+# Use of translate function needs these imports
+from Training import EncoderRNN
+from Training import AttnDecoderRNN
 
 state = {
     'debug': False,
@@ -36,22 +39,24 @@ def getSearch(user_input, state):
 	search = gs.search(user_input);
 	return search
 def getOutput(user_input, state):
+    print("getting input")
     if user_input == "debug":
         state['debug'] = True
         return "I let you know what is inside me"
     if user_input == "stop debug":
         state['debug'] = False
         return "I will keep my poker face from now on"
-    if user_input == "exit" or user_input == "quit" or user_input == "bye" or user_input == "Bye" or user_input == "goodbye" or user_input == "Goodbye" or user_input == "Exit" or user_input == "Quit":
+    if cmd.tq(user_input):
        print(user_input)
        exit()
-    if user_input == "please translate" or user_input == "Please translate" or user_input == "Translate" or user_input == "translate":
+    if cmd.tc(user_input):
+        print("moi")
         state['translate'] = True
         return "Sure, I will translate from Oshiwambo to English"
     if user_input == "stop translating":
         state['translate'] = False
         return "Okay, let's talk about something"
-    if user_input == "please search" or user_input == "Please search" or user_input == "search" or user_input == "Search":
+    if cmd.ts(user_input):
 	    state['search']  = True
 	    return "What do you want to search about"
     if user_input == "stop searching":
