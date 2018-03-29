@@ -50,6 +50,16 @@ Prepare nltk
     >>> import nltk
     >>> nltk.download('punkt')
 
+### Install chromedriver
+
+With Linux
+
+    sudo apt-get install chromium-chromedriver
+
+With Mac
+
+    brew install chromedriver
+
 ## Running the app
 
     python app.py
