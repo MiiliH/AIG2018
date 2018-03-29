@@ -31,6 +31,8 @@ Prepare nltk
     >>> import nltk
     >>> nltk.download('punkt')
 
+You may need to install Pytorch [manually](http://pytorch.org/)
+
 ### Create virtual environment with conda
 
     conda create -n env python=3.6
@@ -49,6 +51,18 @@ Prepare nltk
 
     >>> import nltk
     >>> nltk.download('punkt')
+
+You may need to install Pytorch [manually](http://pytorch.org/)
+
+### Install chromedriver
+
+With Linux
+
+    sudo apt-get install chromium-chromedriver
+
+With Mac
+
+    brew install chromedriver
 
 ## Running the app
 

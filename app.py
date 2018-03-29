@@ -6,9 +6,11 @@ import logging
 import googleSearch as gs
 import Chatbot.chat as chat
 import Translate as tr
-from Translate import EncoderRNN
-from Translate import AttnDecoderRNN
 import commands as cmd
+
+# Use of translate function needs these imports
+from Training import EncoderRNN
+from Training import AttnDecoderRNN
 
 state = {
     'debug': False,
@@ -37,6 +39,7 @@ def getSearch(user_input, state):
 	search = gs.search(user_input);
 	return search
 def getOutput(user_input, state):
+    print("getting input")
     if user_input == "debug":
         state['debug'] = True
         return "I let you know what is inside me"
@@ -47,6 +50,7 @@ def getOutput(user_input, state):
        print(user_input)
        exit()
     if cmd.tc(user_input):
+        print("moi")
         state['translate'] = True
         return "Sure, I will translate from Oshiwambo to English"
     if user_input == "stop translating":
