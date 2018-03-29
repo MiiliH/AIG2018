@@ -39,7 +39,6 @@ def getSearch(user_input, state):
 	search = gs.search(user_input);
 	return search
 def getOutput(user_input, state):
-    print("getting input")
     if user_input == "debug":
         state['debug'] = True
         return "I let you know what is inside me"
