@@ -12,6 +12,7 @@ from torch import optim
 import torch.nn.functional as F
 import time
 import math
+import numpy as np
 
 use_cuda = torch.cuda.is_available()
 
@@ -19,6 +20,9 @@ use_cuda = torch.cuda.is_available()
 SOS_token = 0
 EOS_token = 1
 
+# Amount of Words
+# This determines also the length for attention decoder
+MAX_LENGTH = 10
 
 class Lang:
     def __init__(self, name):
@@ -77,23 +81,9 @@ def readLangs(lang1, lang2, reverse=False):
 
     return input_lang, output_lang, pairs
 
-MAX_LENGTH = 10
-
-eng_prefixes = (
-    "i am ", "i m ",
-    "he is", "he s ",
-    "she is", "she s",
-    "you are", "you re ",
-    "we are", "we re ",
-    "they are", "they re "
-)
-
-
 def filterPair(p):
     return len(p[0].split(' ')) < MAX_LENGTH and \
-        len(p[1].split(' ')) < MAX_LENGTH and \
-        p[1].startswith(eng_prefixes)
-
+        len(p[1].split(' ')) < MAX_LENGTH
 
 def filterPairs(pairs):
     return [pair for pair in pairs if filterPair(pair)]
@@ -103,6 +93,13 @@ def prepareData(lang1, lang2, reverse=False):
     print("Read %s sentence pairs" % len(pairs))
     pairs = filterPairs(pairs)
     print("Trimmed to %s sentence pairs" % len(pairs))
+
+    words_out = 'words_trained.txt'
+    file = open(words_out,'w')
+    for pair in pairs:
+        file.write(pair[0] + "\t" + pair[1] + "\n")
+    print("Saved trained word pairs into " + words_out)
+
     print("Counting words...")
     for pair in pairs:
         input_lang.addSentence(pair[0])
@@ -110,11 +107,8 @@ def prepareData(lang1, lang2, reverse=False):
     print("Counted words:")
     print(input_lang.name, input_lang.n_words)
     print(output_lang.name, output_lang.n_words)
+
     return input_lang, output_lang, pairs
-
-
-input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
-print(random.choice(pairs))
 
 #Model
 #encoderRNN
@@ -206,7 +200,6 @@ class AttnDecoderRNN(nn.Module):
 #Training the model
 def indexesFromSentence(lang, sentence):
     return [lang.word2index[word] for word in sentence.split(' ')]
-
 
 def variableFromSentence(lang, sentence):
     indexes = indexesFromSentence(lang, sentence)
@@ -326,6 +319,7 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
             plot_loss_avg = plot_loss_total / plot_every
             plot_losses.append(plot_loss_avg)
             plot_loss_total = 0
+    showPlot(plot_losses)
 
 def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
     input_variable = variableFromSentence(input_lang, sentence)
@@ -374,19 +368,43 @@ def evaluateRandomly(encoder, decoder, n=10):
         output_sentence = ' '.join(output_words)
         print('<', output_sentence)
         print('')
-
-hidden_size = 256
-encoder1 = EncoderRNN(input_lang.n_words,hidden_size)
-attn_decoder1 = AttnDecoderRNN(hidden_size,output_lang.n_words, dropout_p=0.1)
-
+        
+def evaluateRandomly(encoder, decoder, n=15):
+    print('')
+    print('Evaluating the model')
+    print('')
+    for i in range(n):
+        pair = random.choice(pairs)
+        print('>', pair[0])
+        print('=', pair[1])
+        output_words, attentions = evaluate(encoder, decoder, pair[0])
+        output_sentence = ' '.join(output_words)
+        print('<', output_sentence)
+        print('')
 
 if use_cuda:
     encoder1 = encoder1.cuda()
     attn_decoder1 = attn_decoder1.cuda()
 
-trainIters(encoder1, attn_decoder1, 1180, print_every=295)
-print("Model trained.....")
-print("Saving models.....")
-torch.save(encoder1,'encoder')
-torch.save(attn_decoder1,'decoder')#
-print("Models saved.....")
+# Language information is needed both when using translator for training and as a module
+# for translating
+input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
+
+if __name__ == '__main__':
+    print(random.choice(pairs))
+
+    # Amount of neurons in a hidden layer
+    hidden_size = 256
+    encoder1 = EncoderRNN(input_lang.n_words,hidden_size)
+    attn_decoder1 = AttnDecoderRNN(hidden_size,output_lang.n_words, dropout_p=0.1)
+
+    # Higher learning rate helps to converge faster with gradient descedent but
+    # if it is too big, the algrithm may not converge at all
+    trainIters(encoder1, attn_decoder1, 4000, print_every=300, learning_rate=0.02)
+    print("Model trained.....")
+    print("Saving models.....")
+    torch.save(encoder1,'encoder')
+    torch.save(attn_decoder1,'decoder')
+    print("Models saved.....")
+
+    evaluateRandomly(encoder1, attn_decoder1, n=30)

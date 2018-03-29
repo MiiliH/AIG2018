@@ -1,6 +1,8 @@
 src/pip-delete-this-directory.txt
 src/prompt-toolkit
 env
+.idea/
+venv
 __pycache__
 .ipynb_checkpoints
 Chatbot/checkpoint

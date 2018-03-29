@@ -1,20 +1,22 @@
 # AIG2018
 Repo for the AIG course project
 
-#Requirements
-* Python 3
+## Requirements
+* Python 3.6
 * [Python virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
 
-#Installation
+## Installation
 checkout git repository:
 
     git clone ...
     cd AIG2018
 
-create virtual environment
+Choose to install requirements either with pip or conda
 
-    virtualenv env
+### Create virtual environment with pip
+
+    virtualenv --python=<path-to-python-3.6> env
 
 activate virtual environment
 
@@ -29,18 +31,43 @@ Prepare nltk
     >>> import nltk
     >>> nltk.download('punkt')
 
-#Running the app
+### Create virtual environment with conda
+
+    conda create -n env python=3.6
+    source activate env
+
+Install requirements using
+
+    conda install <package-name>
+
+For prompt_toolkit 2.0 use
+
+    conda install pip
+    pip install -e git+https://github.com/jonathanslenders/python-prompt-toolkit@2.0#egg=prompt_toolkit
+
+Prepare nltk
+
+    >>> import nltk
+    >>> nltk.download('punkt')
+
+## Running the app
 
     python app.py
 
-#Virtualenv
-When you are done, deactivate virtualenv
+## Virtualenv
+When you are done, deactivate virtual environment
 
     deactivate
 
-#Chat commands
+## Chat commands
     debug
     stop debug
     please translate
+    Translate
+    please search
+    Search 
+    stop searching
     stop translating
     bye
+    goodbye
+    exit
