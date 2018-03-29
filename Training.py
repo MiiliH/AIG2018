@@ -25,6 +25,7 @@ EOS_token = 1
 # Amount of Words
 # This determines also the length for attention decoder
 MAX_LENGTH = 10
+plot = False
 
 class Lang:
     def __init__(self, name):
@@ -321,7 +322,8 @@ def trainIters(encoder, decoder, n_iters, print_every=1000, plot_every=100, lear
             plot_loss_avg = plot_loss_total / plot_every
             plot_losses.append(plot_loss_avg)
             plot_loss_total = 0
-    showPlot(plot_losses)
+    if plot:
+        showPlot(plot_losses)
 
 def evaluate(encoder, decoder, sentence, max_length=MAX_LENGTH):
     input_variable = variableFromSentence(input_lang, sentence)
