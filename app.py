@@ -8,6 +8,7 @@ import Chatbot.chat as chat
 import Translate as tr
 from Translate import EncoderRNN
 from Translate import AttnDecoderRNN
+import commands as cmd
 
 state = {
     'debug': False,
@@ -42,16 +43,16 @@ def getOutput(user_input, state):
     if user_input == "stop debug":
         state['debug'] = False
         return "I will keep my poker face from now on"
-    if user_input == "exit" or user_input == "quit" or user_input == "bye" or user_input == "Bye" or user_input == "goodbye" or user_input == "Goodbye" or user_input == "Exit" or user_input == "Quit":
+    if cmd.tq(user_input):
        print(user_input)
        exit()
-    if user_input == "please translate" or user_input == "Please translate" or user_input == "Translate" or user_input == "translate":
+    if cmd.tc(user_input):
         state['translate'] = True
         return "Sure, I will translate from Oshiwambo to English"
     if user_input == "stop translating":
         state['translate'] = False
         return "Okay, let's talk about something"
-    if user_input == "please search" or user_input == "Please search" or user_input == "search" or user_input == "Search":
+    if cmd.ts(user_input):
 	    state['search']  = True
 	    return "What do you want to search about"
     if user_input == "stop searching":
