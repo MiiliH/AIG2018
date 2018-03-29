@@ -6,8 +6,9 @@ import logging
 import googleSearch as gs
 import Chatbot.chat as chat
 import Translate as tr
-from Translate import EncoderRNN
-from Translate import AttnDecoderRNN
+# Use of translate function needs these imports
+from Training import EncoderRNN
+from Training import AttnDecoderRNN
 
 state = {
     'debug': False,
