@@ -5,13 +5,13 @@
 		"context_set": ""
 	},
 	{"tag": "greetingResponses_osh",
-		"patterns":["Onawa","Ondi ku hole.", "Onda mwena", "Aawe","Eewa","Kandi na.", "Eee", "Eeno","Omwaalu", "Ngame ondi hole uugame nongalo","Anna", "Matti","Veijo"],
-		"responses":["Owa longwa shike nena kosikola?", "Otuye kokapana.", "Tuye tu ka dhane etanga.", "Onda hala tu ka tale Black Panther.", "Oto ningi shike?", "Owa lya nale omwiha?", "Ou hole shike?"]
+		"patterns":["Onawa","Ondi ku hole.", "Onda mwena", "Aawe","Eewa","Kandi na.", "Eee", "Eeno","Omwaalu", "Ngame ondi hole uugame nongalo"],
+		"responses":["Owa longwa shike nena kosikola?", "Otuye kokapana.", "Ila kaandjetu.", "Tuye tu ka dhane etanga.", "Onda hala tu ka tale Black Panther.", "Oto ningi shike?", "Owa lya nale omwiha?", "Ou hole shike?"]
 	
 	},
 	{"tag": "questions_osh",
-		"patterns":["Ongoye lye?"],
-		"responses": ["Carlos. Ongoye lye?","Emilia"]
+		"patterns":["Ongoye lye?", "Edhina lyoye olye?", "Owalya shike nena?"],
+		"responses": ["AI. Ongoye lye?", "Onda lya oshithima nonyama.", "Oho zi peni?"]
 	},
 	{"tag": "love_osh",
 		"patterns":["Ondi ku hole"],
@@ -29,6 +29,10 @@
 		"patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
 		"responses": ["Hello, thanks for visting", "Good to see you again", "Hi there, how can I help?"],
 		"context_set": ""
+	},
+	{"tag": "story_telling",
+		"patterns": ["Lombwelandje okahokololo.", "Lombwela ndje ehokololo.", "Oto lombwendje shike nee?"],
+		"responses": ["Esiku limwe okwa Shimbungu naKaandje. Kaandje okwa li ena oondunge noonkondo. Kaandje okwa lombwele Shimbungu opo yaye ya ka tale etango mboka ha li lala sho hali ningine. Shimbungu okwa itaala opo yaye. Opo ne Kaandje okwa lombwele Shimbungu kutya ne mu adhe tayi manga teya. kaandje ina galuka we. Shimbungu okwa yi eta kana.", "Namibia oshilongo oshi wanawana na oshina ombili."]	
 	},
 	{"tag": "goodbye_eng",
 		"patterns": ["Bye", "See you later", "Goodbye"],
