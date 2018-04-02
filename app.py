@@ -7,6 +7,8 @@ import googleSearch as gs
 import Chatbot.chat as chat
 import Translate as tr
 import commands as cmd
+import cleverbot.chat as cb
+
 
 # Use of translate function needs these imports
 from Training import EncoderRNN
@@ -26,6 +28,9 @@ def exit():
     print("See you later alligator!")
     sys.exit()
 
+def cleverbot(user_input, state):
+	cleverbot = cb.main() 
+    
 def getTranslation(user_input, state):
     try:
         translate = tr.translate(user_input);
@@ -66,6 +71,8 @@ def getOutput(user_input, state):
 	    return getSearch(user_input, state)
     if state['translate']:
         return getTranslation(user_input, state)
+    if user_input == "cleverbot":
+        return cleverbot(user_input, state)
     else:
         return chat.respond(user_input)
 
