@@ -60,7 +60,7 @@ With Linux
 
     sudo apt-get install chromium-chromedriver
 
-With Mac
+With Mac, using [Hombrew](https://brew.sh/)
 
     brew install chromedriver
 
