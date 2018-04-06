@@ -39,7 +39,6 @@ def getSearch(user_input, state):
 	search = gs.search(user_input);
 	return search
 def getOutput(user_input, state):
-    print("getting input")
     if user_input == "debug":
         state['debug'] = True
         return "I let you know what is inside me"
@@ -72,6 +71,13 @@ def getOutput(user_input, state):
 
 
 if __name__ == '__main__':
+    print('')
+    file = open('polar-bear.txt', 'r')
+    print(file.read())
+    print('')
+    print('Welcome to meet Jääkarhu (polar bear), a chat bot')
+    print('')
+
     while True:
         try:
             answer = prompt('You: ', style=input_style)

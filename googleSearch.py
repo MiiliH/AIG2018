@@ -1,3 +1,4 @@
+import selenium as se
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -9,7 +10,8 @@ chrome_options.add_argument("--headless")
 # Try if chrome driver is on path
 try:
     driver = webdriver.Chrome(chrome_options = chrome_options)
-except FileNotFoundError:
+except se.common.exceptions.WebDriverException:
+    # Default install location at linux
     driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", chrome_options = chrome_options)
 
 def search(searchQuery):

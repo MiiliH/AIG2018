@@ -11,9 +11,6 @@ from torch import optim
 import torch.nn.functional as F
 import time
 import math
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import numpy as np
 
 use_cuda = torch.cuda.is_available()
 
@@ -25,6 +22,7 @@ EOS_token = 1
 # This determines also the length for attention decoder
 MAX_LENGTH = 10
 plot = False
+prints = __name__ == '__main__'
 
 class Lang:
     def __init__(self, name):
@@ -54,8 +52,6 @@ def unicodeToAscii(s):
     )
 
 # Lowercase, trim, and remove non-letter characters
-
-
 def normalizeString(s):
     s = unicodeToAscii(s.lower().strip())
     s = re.sub(r"([.!?])", r" \1", s)
@@ -63,7 +59,8 @@ def normalizeString(s):
     return s
 
 def readLangs(lang1, lang2, reverse=False):
-    print("Reading lines...")
+    if prints:
+       print("Reading lines...")
 
     # Read the file and split into lines
     lines = open('data/%s-%s.txt' % (lang1, lang2), encoding='utf-8').\
@@ -92,23 +89,29 @@ def filterPairs(pairs):
 
 def prepareData(lang1, lang2, reverse=False):
     input_lang, output_lang, pairs = readLangs(lang1, lang2, reverse)
-    print("Read %s sentence pairs" % len(pairs))
+    if prints:
+        print("Read %s sentence pairs" % len(pairs))
+
     pairs = filterPairs(pairs)
-    print("Trimmed to %s sentence pairs" % len(pairs))
+
+    if prints:
+        print("Trimmed to %s sentence pairs" % len(pairs))
 
     words_out = 'words_trained.txt'
     file = open(words_out,'w')
     for pair in pairs:
         file.write(pair[0] + "\t" + pair[1] + "\n")
-    print("Saved trained word pairs into " + words_out)
-
-    print("Counting words...")
+    if prints:
+        print("Saved trained word pairs into " + words_out)
+        print("Counting words...")
     for pair in pairs:
         input_lang.addSentence(pair[0])
         output_lang.addSentence(pair[1])
-    print("Counted words:")
-    print(input_lang.name, input_lang.n_words)
-    print(output_lang.name, output_lang.n_words)
+
+    if prints:
+        print("Counted words:")
+        print(input_lang.name, input_lang.n_words)
+        print(output_lang.name, output_lang.n_words)
 
     return input_lang, output_lang, pairs
 
@@ -402,6 +405,10 @@ if use_cuda:
 input_lang, output_lang, pairs = prepareData('eng', 'osh', True)
 
 if __name__ == '__main__':
+    if plot:
+        import matplotlib.pyplot as plt
+        import matplotlib.ticker as ticker
+
     print(random.choice(pairs))
 
     # Amount of neurons in a hidden layer
